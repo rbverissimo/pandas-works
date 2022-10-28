@@ -1,12 +1,11 @@
 import pandas as pd
 
-column = [1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009]
-column2 = ["Bob", "Alice", "Kiegraard", "Lybiana", "Object", "Javasson", 0, 0, 0, 0]
+tenants = ["Agmar", "Branca", "Danila", "Elaine", "Paulo"]
 
-# column2 can only be attached to a DataFrame IF it has the same length as all the other columns at the DF
-titled_column = {'numbers': column,
-                 'names': column2}  # the column list will be appended into the "numbers" key in the dict
-data = pd.DataFrame(titled_column)
-print(data)  # this organizes the column list in a table
+info_tenants = {'name': tenants,
+                'rent': [330, 550, 550, 440, 550],
+                'people living': [1, 2, 4, 3, 2]}
 
+table_tenants = pd.DataFrame(info_tenants)
 
+print(table_tenants)
