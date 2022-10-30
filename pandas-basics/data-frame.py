@@ -9,3 +9,17 @@ info_tenants = {'name': tenants,
 table_tenants = pd.DataFrame(info_tenants)
 
 print(table_tenants)
+
+# creating data from dataframe and adding it to the data frame
+avg_per_person_living_rent = []
+# avg = rent / people living
+for i in range(len(table_tenants)):
+    avg = table_tenants['rent'][i] / table_tenants['people living'][i]
+    avg_per_person_living_rent.append(avg)
+
+table_tenants["avg"] = avg_per_person_living_rent  # this line will add it to the data frame
+
+print("After adding some new information to the data frame: ")
+print(table_tenants)
+
+
