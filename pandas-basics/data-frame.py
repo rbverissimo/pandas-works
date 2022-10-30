@@ -22,4 +22,12 @@ table_tenants["avg"] = avg_per_person_living_rent  # this line will add it to th
 print("After adding some new information to the data frame: ")
 print(table_tenants)
 
+# saving it to csv
+table_tenants.to_csv("tenants_avg.csv")  # saves it on the same path of the source
+# table_tenants.to_csv("tenants_avg.csv", sep='\n')
+# passing on an sep argument enables the code to define another separator other than a comma
+# alo, even tho the to_csv is called to_csv it may also create files such as .txt
+
+
+
 
